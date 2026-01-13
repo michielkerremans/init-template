@@ -1,0 +1,179 @@
+/* ========== Counter Section ========== */
+.counter-section {
+  margin-bottom: 2rem;
+  margin-left: 0;
+  padding-left: 0;
+}
+.counter-section h3 {
+  margin-bottom: 0.3rem;
+  margin-top: 0;
+  margin-left: 0;
+  padding-left: 0;
+}
+.counter-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  margin-left: 0;
+  padding-left: 0;
+}
+.counter-row .value-field.counter-value {
+  line-height: 1.2em;
+  padding-top: 0.05em;
+  padding-bottom: 0.05em;
+  margin: 0;
+}
+.counter-row button {
+  line-height: 1.6em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+}
+
+.counter-row .value-field,
+.counter-row button {
+  vertical-align: middle;
+}
+/* ========== Demo Box ========== */
+.demo-box {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0.2rem 2.2rem 0.2rem 2.2rem;
+  margin: 1.5rem 1.5rem 0.7rem 0;
+  background: #181c20;
+  max-width: 700px;
+  width: 100%;
+  box-sizing: border-box;
+}
+@media (max-width: 700px) {
+  .demo-box {
+    padding: 0.1rem 1rem 0.1rem 1rem;
+    border-radius: 5px;
+    margin: 1.5rem 1.5rem 0.5rem 0;
+    width: auto;
+    min-width: 0;
+    max-width: calc(100vw - 3rem); /* 1.5rem left + 1.5rem right margin */
+    box-sizing: border-box;
+  }
+}
+
+/* ========== Value Field ========== */
+.value-field {
+  display: inline-block;
+  max-width: 4em;
+  padding: 0.2em 0.7em;
+  margin-left: 0;
+  background: #23272f;
+  color: #e0e0e0;
+  border-radius: 6px;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid #333;
+  box-shadow: 0 1px 2px #0002;
+}
+
+/* ========== Headings ========== */
+h2 {
+  color: var(--mat-sys-primary);
+}
+
+/* ========== Layout ========== */
+.demo-row {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 0.2rem;
+  flex-wrap: wrap;
+}
+.demo-section {
+  flex: 1 1 0;
+  min-width: 220px;
+  max-width: 320px;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.demo-section:last-child {
+  margin-bottom: 0;
+}
+
+/* ========== Counter Value Styles ========== */
+.counter-label {
+  font-size: 1.1em;
+  color: #b0bec5;
+  font-weight: 600;
+  margin-bottom: 0.2em;
+  margin-left: 0;
+  margin-right: 0;
+  display: inline-block;
+}
+.counter-value {
+  display: inline-block;
+  margin-left: 0;
+  vertical-align: middle;
+}
+
+/* ========== Table Styles ========== */
+.demo-table td {
+  vertical-align: top;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  width: 1%;
+  white-space: nowrap;
+}
+
+/* ========== Unsubscribed State ========== */
+.unsubscribed {
+  color: #bdbdbd;
+  font-size: 1.1em;
+  font-weight: bold;
+  background: #23272f;
+  padding: 0.2em 0.8em;
+  border-radius: 6px;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+/* ========== Button Styles ========== */
+button {
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  background: #23272f;
+  color: #e0e0e0;
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 0.4em 1.2em;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+button.subscribe {
+  background: #23272f;
+  color: #4caf50;
+  border: 1px solid #4caf50;
+}
+button.unsubscribe {
+  background: #23272f;
+  color: #ff5252;
+  border: 1px solid #ff5252;
+}
+
+/* ========== Info and Highlight ========== */
+.subscriber-info {
+  margin-top: 0.5em;
+  margin-bottom: 0.1em;
+}
+.demo-section:last-child .subscriber-info:last-child {
+  margin-bottom: 1em;
+}
+.highlight {
+  color: #ffd54f;
+  font-weight: 700;
+  background: #23272f;
+  border-radius: 4px;
+  padding: 0 0.2em;
+}

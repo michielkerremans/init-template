@@ -1,0 +1,10 @@
+<nav class="navbar" aria-label="Main navigation" role="navigation">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+        [attr.aria-current]="router.isActive('/', true) ? 'page' : null">Home</a>
+    <a routerLink="/http" routerLinkActive="active"
+        [attr.aria-current]="router.isActive('/http', true) ? 'page' : null">HTTP</a>
+    <a routerLink="/login" routerLinkActive="active"
+        [attr.aria-current]="router.isActive('/login', true) ? 'page' : null">Login</a>
+    <a routerLink="/angular-demo" routerLinkActive="active"
+        [attr.aria-current]="router.isActive('/angular-demo', true) ? 'page' : null">Angular Demo</a>
+</nav>

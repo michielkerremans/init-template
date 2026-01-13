@@ -1,0 +1,38 @@
+<main>
+    <h2>Observable vs BehaviorSubject</h2>
+    <div class="counter-section">
+        <h3>Shared Counter</h3>
+        <div class="counter-row">
+            <div class="value-field counter-value">{{ counter() }}</div>
+            <button type="button" (click)="incrementCounter()" aria-label="Increment counter">Increment</button>
+        </div>
+    </div>
+    <div class="demo-box">
+        <div class="demo-row">
+            <section class="demo-section">
+                <h3>Observable</h3>
+                <button type="button" aria-label="Toggle Observable subscription" (click)="toggleObservableSub()"
+                    [ngClass]="obsSubscribed() ? 'unsubscribe' : 'subscribe'">
+                    {{ obsSubscribed() ? 'Unsubscribe' : 'Subscribe' }}
+                </button>
+                <div class="value-field" [ngClass]="obsSubscribed() ? 'subscribed' : 'unsubscribed'">{{ obsValue() ===
+                    null
+                    ? '?' : obsValue() }}</div>
+                <div class="subscriber-info"><small>New subscribers get <span class="highlight">no value</span> until
+                        next
+                        emit.</small></div>
+            </section>
+            <section class="demo-section">
+                <h3>BehaviorSubject</h3>
+                <button type="button" aria-label="Toggle BehaviorSubject subscription"
+                    (click)="toggleBehaviorSubjectSub()" [ngClass]="bsSubscribed() ? 'unsubscribe' : 'subscribe'">
+                    {{ bsSubscribed() ? 'Unsubscribe' : 'Subscribe' }}
+                </button>
+                <div class="value-field" [ngClass]="bsSubscribed() ? 'subscribed' : 'unsubscribed'">{{ bsValue() }}
+                </div>
+                <div class="subscriber-info"><small>New subscribers get the <span class="highlight">latest value</span>
+                        immediately.</small></div>
+            </section>
+        </div>
+    </div>
+</main>
